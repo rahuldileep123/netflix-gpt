@@ -1,5 +1,3 @@
-npm create vite@latest netflix-gpt -- --template react
-configured tailwind css
 
 # features
 Login/sign up
@@ -15,3 +13,9 @@ Browse page (after authentication)
 NetflixGPT
          -search bar 
          Movie suggestions        
+
+
+npm create vite@latest netflix-gpt -- --template react
+configured tailwind css
+header
+login form
