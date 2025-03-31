@@ -37,12 +37,12 @@ const Login = () => {
             // Profile updated!
             const {uid,email,displayName}=auth.currentUser
             dispatch(setUser({uid:uid,email:email,displayName:displayName}))
-            navigate("/Browse")
+            
           }).catch((error) => {
             // An error occurred
             // ...
           });
-          console.log(user);
+          // console.log(user);
           
           
           
@@ -60,7 +60,7 @@ const Login = () => {
     const user = userCredential.user;
     console.log(user);
     
-    navigate("/Browse")
+    
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -73,24 +73,27 @@ const Login = () => {
     setIsSignInForm(!isSignInForm);
   };
   return (
-    <div className="h-screen relative">
+    <div className="h-screen relative ">
       <Header />
       <div>
-        {" "}
+        
         <img
-          className="h-screen w-full"
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/f6e7f6df-6973-46ef-b98f-12560d2b3c69/web/IN-en-20250317-TRIFECTA-perspective_26f87873-6014-460d-a6fb-1d96d85ffe5f_large.jpg"
+          className="h-screen w-full object-cover"
+          src="https://repository-images.githubusercontent.com/299409710/b42f7780-0fe1-11eb-8460-e459acd20fb4"
           alt=""
         />
       </div>
-      <div className="">
+      {/* className="absolute inset-0 flex items-center justify-center px-4" 
+      absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2*/}
+      <div  className="absolute inset-0 flex items-center justify-center px-4" >
         <form
           action=""
-          className="bg-black bg-opacity-80 rounded p-10 w-3/12 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col gap-2 text-white "
+          className="bg-black bg-opacity-80 rounded p-10 max-w-md flex flex-col gap-2 text-white "
         >
           <h1 className="text-3xl font-bold py-4">
             {isSignInForm ? "Sign In" : "Sign Up"}
           </h1>
+          <p className='font-bold text-white'>This site is not associated with Netflix</p>
           {!isSignInForm && (
             <input
             ref={fullName}
