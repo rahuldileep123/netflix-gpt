@@ -11,7 +11,7 @@ const mainMovie = movies[0]
 const {original_title,overview,id}=mainMovie
 
   return (
-    <div className='mt-0 top-0 relative'>
+    <div className='relative'>
 
         <VideoTitle title={original_title} overview={overview}/>
        <VideoBackground movieId={id}/>

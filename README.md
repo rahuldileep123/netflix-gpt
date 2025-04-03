@@ -41,4 +41,6 @@ update store with movie data
 -planning for main =container and secondary container
 -fetch data for trailer video
 -embedded youtube video
--
+-build secondary container
+-build movie card
+-tmdb image cdn url
