@@ -44,3 +44,6 @@ update store with movie data
 -build secondary container
 -build movie card
 -tmdb image cdn url
+-GPT search page
+-GPT search bar
+-Multi-language feature

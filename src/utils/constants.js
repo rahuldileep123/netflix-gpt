@@ -7,3 +7,20 @@ export const API_OPTIONS= {
   };
 
   export const IMG_URL="https://image.tmdb.org/t/p/w200/"
+
+  export const MAIN_BG="https://repository-images.githubusercontent.com/299409710/b42f7780-0fe1-11eb-8460-e459acd20fb4"
+
+  export const SUPPORTED_LANGUAGES=[
+    {
+      identifier:"en",
+      name:"English",
+    },
+    {
+      identifier:"hindi",
+      name:"हिंदी",
+    },
+    {
+      identifier:"malayalam",
+      name:"മലയാളം",
+    }
+  ]

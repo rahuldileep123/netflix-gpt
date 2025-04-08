@@ -6,6 +6,8 @@ import {auth} from "../utils/firebase"
 import { useDispatch } from "react-redux";
 import { setUser } from "../utils/userSlice";
 import { useNavigate } from "react-router";
+import { MAIN_BG } from "../utils/constants";
+
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState();
@@ -79,7 +81,7 @@ const Login = () => {
         
         <img
           className="h-screen w-full object-cover"
-          src="https://repository-images.githubusercontent.com/299409710/b42f7780-0fe1-11eb-8460-e459acd20fb4"
+          src={MAIN_BG}
           alt=""
         />
       </div>
