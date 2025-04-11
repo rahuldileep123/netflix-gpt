@@ -12,7 +12,6 @@ const usePopularMovies = () => {
     const getPopularMovies = async () => {
         const response = await fetch('https://api.themoviedb.org/3/movie/top_rated?page=1', API_OPTIONS)
         const json = await response.json()
-        console.log("popular",json.results)
         dispatch(setPopularMovies(json.results))
     }
 

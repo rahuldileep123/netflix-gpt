@@ -4,15 +4,14 @@ import MovieList from "./MovieList";
 
 const SecondaryContainer = () => {
   const movies = useSelector((store) => store.movies);
-  console.log(movies.popularMovies);
   
 
-  return (
-    <div className="bg-black ">
-      <div className="relative -mt-60">
+  return (  
+    <div className="bg-black">
+      <div className="relative p-2 md:-mt-60 -mt-[15%]">
         <MovieList title={"Now Playing"} movies={movies?.nowPlayingMovies} />
         <MovieList title={"Popular Movies"} movies={movies?.popularMovies} />
-        <MovieList title={"Now Playing"} movies={movies?.nowPlayingMovies} />
+        <MovieList title={"Upcoming Movies"} movies={movies?.upcomingMovies} />
       </div>
     </div>
   );

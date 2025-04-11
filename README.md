@@ -47,3 +47,9 @@ update store with movie data
 -GPT search page
 -GPT search bar
 -Multi-language feature
+-gpt seaarch bar with gemini ai
+-fetch gpt movie suggetion from tmdb
+-reused movielist component
+-memoization
+-added .env file
+-responsiveness

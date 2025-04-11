@@ -5,7 +5,6 @@ import { API_OPTIONS } from "../utils/constants";
 import { useDispatch } from "react-redux";
 import { setGptMovies } from "../utils/gptSlice";
 const GptSearchBar = ({ prefLang }) => {
-  console.log(prefLang);
   const dispatch= useDispatch()
   const searchText = useRef(null);
 
@@ -16,7 +15,6 @@ const GptSearchBar = ({ prefLang }) => {
   }
 
   const handleGptSearch = async () => {
-    console.log(searchText.current.value);
     const gptQuery="Act as amovie recomendation sysytem and suggest 5 movie names for the query :" + searchText.current.value + ".result should be comma seperated like the given example.Example result: heat,interstellar,raid,inception,prestige"
 
     const response = await geminiAI.models.generateContent({
@@ -24,22 +22,19 @@ const GptSearchBar = ({ prefLang }) => {
         contents: gptQuery,
       })
     
-    console.log(response.text);
     const gptResult=response.text.split(",")
     const promiseArray= gptResult.map(movie=>searchTmdbMovies(movie))
-    console.log(promiseArray);
     const results = await Promise.all(promiseArray);
-    console.log(results);
     dispatch(setGptMovies({movieNames:gptResult,movieResults:results}))
     
   };
 
   return (
-    <div className="pt-[8%] flex items-center justify-center">
+    <div className="pt-[8%] flex items-center justify-center ">
       <form
         action=""
         onSubmit={(e) => e.preventDefault()}
-        className="bg-black w-1/2 grid grid-cols-12 rounded bg-opacity-70"
+        className="bg-black md:w-1/2 grid grid-cols-12 rounded bg-opacity-70 mt-[30%] md:mt-0"
       >
         <input
           ref={searchText}

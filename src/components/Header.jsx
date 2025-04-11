@@ -49,19 +49,19 @@ useEffect(()=>{
   return ()=> unsubscribe()
 },[])
   return (
-    <div className='absolute z-10 w-full bg-gradient-to-b from-black flex items-center justify-between'>
-        <img className='w-[150px] px-8 py-2' src="https://2.gravatar.com/avatar/64a869c07aebeba327f5bd4949f6b8b017f7eba6116baee6296a5127185c98e4?size=256" alt="logo" />
+    <div className='absolute z-10 w-full bg-gradient-to-b from-black flex flex-col md:flex-row items-center justify-between p-3'>
+        <img className='w-[150px] px-8 py-2' src="https://wallpapers.com/images/featured/netflix-logo-png-fqwt81hprrz7xsfg.jpg" alt="logo" />
 
        
      
     {user && 
-    <div className='flex mx-10 items-center'>
+    <div className='w-full md:w-1/6 flex md:mx-10 justify-between items-center '>
    { showGpt &&  <select onChange={(e)=>handleLanguage(e.target.value)} className='p-2 bg-gray-900 text-white ' name="" id="">
         {SUPPORTED_LANGUAGES.map(lang=>(<option key={lang.identifier} value={lang.identifier}>{lang.name}</ option>))}
       </select>}
       <button onClick={handleGptSearch} className='px-4 py-2 mx-3 bg-red-800 rounded text-white'>{showGpt? "Home":"GPT search"}</button>
-      <img className='w-[50px]' src="https://i.pinimg.com/564x/1b/a2/e6/1ba2e6d1d4874546c70c91f1024e17fb.jpg" alt="" />
-      <button className='text-white' onClick={handleSignOut}>sign Out</button> 
+      <img className='w-[40px] hidden md:block' src="https://i.pinimg.com/564x/1b/a2/e6/1ba2e6d1d4874546c70c91f1024e17fb.jpg" alt="" />
+      <button className='text-white font-bold' onClick={handleSignOut}>(Sign Out)</button> 
       </div> }
       
     </div>
