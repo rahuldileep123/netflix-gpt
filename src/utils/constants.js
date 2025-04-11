@@ -1,8 +1,10 @@
+
+const TMBD_API_KEY = import.meta.env.VITE_TMBD_API_KEY
 export const API_OPTIONS= {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjODhhN2RjYTcxMGIyZmE0NDkwOGJhYjIwMTg0Yjc4NSIsIm5iZiI6MTc0MzIxNjI5Ni4zMDksInN1YiI6IjY3ZTc1ZWE4NmRlYjhkYTcyMGRkYTIyNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ucu8ziTZLnppgsL9TQVm8iaWnLRox0Egw4zV6rqbk5w'
+      Authorization: `Bearer ${TMBD_API_KEY}`
     }
   };
 
@@ -24,3 +26,7 @@ export const API_OPTIONS= {
       name:"മലയാളം",
     }
   ]
+
+  export const GEMINI_AI_KEY="AIzaSyCs-LROADwG6ok4mNFVNgulblsx7KwgEJw"
+
+  

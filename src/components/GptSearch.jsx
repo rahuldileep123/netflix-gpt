@@ -10,7 +10,7 @@ const GptSearch = () => {
     <div>
         <div className='absolute -z-10'>
         <img
-          className="w-full object-cover"
+          className="w-screen fixed object-cover h-screen"
           src={MAIN_BG}
           alt=""
         />
