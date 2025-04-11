@@ -55,7 +55,7 @@ useEffect(()=>{
        
      
     {user && 
-    <div className='w-full md:w-1/6 flex md:mx-10 justify-between items-center '>
+    <div className='w-full md:w-1/4 flex md:mx-1 md:py-2 justify-between md:justify-end items-center'>
    { showGpt &&  <select onChange={(e)=>handleLanguage(e.target.value)} className='p-2 bg-gray-900 text-white ' name="" id="">
         {SUPPORTED_LANGUAGES.map(lang=>(<option key={lang.identifier} value={lang.identifier}>{lang.name}</ option>))}
       </select>}
